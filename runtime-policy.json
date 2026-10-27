@@ -1,0 +1,52 @@
+{
+  "sdkVersion": "0.1.1",
+  "languageTargets": [
+    "Java",
+    "Kotlin"
+  ],
+  "supportedBackend": {
+    "javaLts": "21",
+    "kotlinLine": "2.4.x",
+    "verifiedToolchain": {
+      "java": "Temurin21.0.13+9",
+      "kotlin": "2.4.21",
+      "maven": "3.9.16"
+    },
+    "libraryBytecode": "Java8",
+    "securityUpdatesRequired": true
+  },
+  "privateFiles": {
+    "platform": "Linux x64",
+    "requires": [
+      "libc statx",
+      "JNA5.19.1"
+    ],
+    "otherPlatforms": "Use an application vault with explicit intent export/import; HTTP SDK remains portable."
+  },
+  "android": {
+    "artifact": "com.availkit:availkit-public:0.1.1",
+    "minimumApi": 26,
+    "publicBookingOnly": true,
+    "workspaceCredentialsAllowed": false,
+    "nativeAccountApis": false,
+    "deviceEmulatorVerification": false,
+    "dependencyPolicy": "Exclude okhttp-jvm and JNA; select OkHttp5.5.1 Android variant and application private storage."
+  },
+  "transport": {
+    "automaticMutationRetries": false,
+    "redirects": false,
+    "ambientProxy": false,
+    "cookies": false,
+    "totalDeadlineMillisDefault": 10000,
+    "totalDeadlineMillisMaximum": 120000,
+    "responseBytesDefault": 1048576,
+    "responseBytesMaximum": 8388608
+  },
+  "verificationPolicy": "Installed consumer and production acceptance is recorded separately; compilation does not establish Android device acceptance.",
+  "distribution": {
+    "kind": "Hosted Maven repository",
+    "repository": "https://availkit.dev/downloads/maven"
+  },
+  "releaseEvidence": "https://github.com/availkit/sdk-jvm/releases/tag/v0.1.1",
+  "verificationScope": "Supported runtimes are compatibility targets. Listed tested toolchains describe finite native checks; installed-consumer, service, mobile and distribution evidence is recorded separately in dated release notes. Source presence does not establish registry availability."
+}

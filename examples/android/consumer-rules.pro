@@ -1,0 +1,2 @@
+-keepattributes *Annotation*,Signature,InnerClasses,EnclosingMethod
+-keep,allowoptimization class com.availkit.Models$* { *; }
